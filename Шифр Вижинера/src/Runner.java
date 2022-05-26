@@ -7,6 +7,8 @@ public class Runner {
         String text = sc.nextLine();
         System.out.println("Введите ключ");
         String key = sc.next().toUpperCase();
+        //Если требуется вывести и проверить строку без пробелов, то заменяем 9 строчку на 11 и убираем 26-29
+        //text = text.replaceAll("\\s","").toUpperCase();
         char[] arrayKey = key.toCharArray();
         int[] keyNumber = new int[arrayKey.length];
         Array.transferKey(arrayKey, keyNumber);
