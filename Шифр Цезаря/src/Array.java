@@ -15,17 +15,4 @@ public class Array {
             return numberAlphabet - key < 0 ? arrayAlphabet[numberAlphabet - key + 33] : arrayAlphabet[numberAlphabet - key];
         }
     }
-
-    public static void transferKey(char[] arrayKey, int[] keyNumber) {
-        String textAlphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-        char[] arrayTextAlphabet = textAlphabet.toCharArray();
-        for (int i = 0; i < keyNumber.length; i++) {
-            for (int j = 0; j < arrayTextAlphabet.length; j++) {
-                if (arrayTextAlphabet[j] == arrayKey[i]) {
-                    keyNumber[i] = j;
-                    break;
-                }
-            }
-        }
-    }
 }
