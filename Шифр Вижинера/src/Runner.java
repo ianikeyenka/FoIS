@@ -5,15 +5,15 @@ public class Runner {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите текст!");
         String text = sc.nextLine();
+        text = text.toUpperCase();
+        //Если требуется вывести и проверить строку без пробелов, то заменяем 8 строчку на 10 и убираем 26-29
+        //text = text.replaceAll("\\s","").toUpperCase();
+        char[] arrayText = text.toCharArray();
         System.out.println("Введите ключ");
         String key = sc.next().toUpperCase();
-        //Если требуется вывести и проверить строку без пробелов, то заменяем 9 строчку на 11 и убираем 26-29
-        //text = text.replaceAll("\\s","").toUpperCase();
         char[] arrayKey = key.toCharArray();
         int[] keyNumber = new int[arrayKey.length];
         Array.transferKey(arrayKey, keyNumber);
-        text = text.toUpperCase();
-        char[] arrayText = text.toCharArray();
         System.out.println("Шифрование - (1)\nРасшифрование - (2)");
         int procedures = sc.nextInt();
         if (procedures != 1 && procedures != 2) {
